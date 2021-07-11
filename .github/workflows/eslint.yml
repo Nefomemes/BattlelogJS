@@ -14,7 +14,7 @@ jobs:
       - name: Checkout things
         uses: actions/checkout@v2.3.4
       - name: Node.JS 14.x
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.2.0
         with:
           node-version: "14"
       - name: Install dependencies
@@ -47,7 +47,7 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           report-json: "eslint_report.json"
       - name: Upload ESLint report
-        uses: actions/upload-artifact@v2.2.3
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: eslint_report.json
           path: eslint_report.json

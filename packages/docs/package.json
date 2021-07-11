@@ -15,13 +15,13 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.11",
-    "docusaurus-plugin-typedoc": "^0.14.2",
-    "typedoc": "0.21.0-beta.2",
+    "docusaurus-plugin-typedoc": "^0.15.1",
+    "typedoc": "0.21.3",
     "typedoc-plugin-markdown": "^3.9.0"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.0",
-    "@docusaurus/preset-classic": "2.0.0-beta.0",
+    "@docusaurus/core": "2.0.0-beta.3",
+    "@docusaurus/preset-classic": "2.0.0-beta.3",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
