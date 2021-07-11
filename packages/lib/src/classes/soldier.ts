@@ -102,11 +102,10 @@ export class Soldier {
    *     instance.
    */
 
-  constructor(user: User, data: Soldier, fetch?: boolean) {
+  constructor(client, data: Soldier, fetch?: boolean) {
     this.structureData(data, fetch);
     Object.defineProperties(this, {
-      user: { value: user, enumerable: false },
-      client: { value: user.client, enumerable: false },
+      client: { value: client, enumerable: false }
     });
   }
   /**
@@ -157,7 +156,7 @@ export class Soldier {
 
   async fetch() {
     let url: string;
-    switch (this.user.client.game) {
+    switch (this.client.game) {
       case "bf4": {
         url = `/warsawoverviewpopulate/${this.persona.personaId}/1/`;
         break;
@@ -167,7 +166,7 @@ export class Soldier {
       }
     }
 
-    const res = await this.user.client.axios.get(url);
+    const res = await this.client.axios.get(url);
 
     utils.structureData(this.stats, res.data.data.overviewStats);
     return this;

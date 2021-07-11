@@ -60,7 +60,7 @@ export interface UserPresence {
     presenceStates: number; // 0 or 1
 
 }
-export interface UserObject {
+export interface User {
   /**
    * @prop {string} username - The user's username.
    * @prop {string} userId - The user's ID.
@@ -70,6 +70,7 @@ export interface UserObject {
   username: string;
   userId: string;
   gravatarMd5: string;
+  profile?: Profile;
   presence: UserPresence;
 }
 /**
@@ -84,7 +85,7 @@ export interface UserProfile {
   * @prop {UserObject} user - The user of this profile. 
   * @prop {Array<Soldier>} soldiers - Soldiers the user have.
   */
-   user: UserObject;
+   user: User;
    platoons: Array<Platoon>;
    friends: Array<User>;
    soldiers: Array<Soldier>;
@@ -96,9 +97,9 @@ export interface UserProfile {
  * @param  client - The client used to access this user.
  * @param {object} data - Raw object data of the user.
  */
-export class User implements UserProfile {
+export class Profile implements UserProfile {
   // @ts-expect-error
-  user: UserObject = {};
+  user: User = {};
   // @ts-expect-error
   userinfo: UserInfo = {};
   client!: GameClient;
@@ -134,7 +135,7 @@ export class User implements UserProfile {
    *
    * @returns the User instance
    */
-  async fetch(): Promise<User> {
+  async fetch(): Promise<Profile> {
     const res = await this.client.axios.get(`/user/${this.user.username}`);
 
     const profile = res.data.context.profileCommon;
@@ -151,7 +152,7 @@ export class User implements UserProfile {
    * @param  data - The data used to structure the class
    * @returns the User
    */
-  structureData(data): User {
+  structureData(data): Profile {
     if (!data) return this;
     utils.structureData(this, data, {
       blacklist: ["tenFriends", "platoons", "platoonFans"],
@@ -162,7 +163,7 @@ export class User implements UserProfile {
      */
 
     if (data.tenFriends && data.tenFriends.length) {
-      this.friends = data.tenFriends.map((i) => new User(this.client, i));
+      this.friends = data.tenFriends.map((i) => new Profile(this.client, i));
     }
 
     if (data.soldiersBox) {
