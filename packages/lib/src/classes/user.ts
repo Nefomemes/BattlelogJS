@@ -1,10 +1,8 @@
 import { Platoon } from "./platoon";
 import * as utils from "../utils";
 import { Soldier } from "./soldier";
-
 import type { GameClient } from "./gameclient";
-import type { GravatarDefaultAvatarType } from "../types/gravatarda";
-import * as querystring from "querystring";
+
 /**
  * Represents the userinfo property of a user's profile
  */
@@ -121,7 +119,10 @@ export class Profile implements UserProfile {
       enumerable: false
     });
     
-  
+    Object.defineProperty(this.user, "profile", {
+      value: this,
+      enumerable: false
+    })
 
     if (typeof data === "object") {
       this.structureData(data);
