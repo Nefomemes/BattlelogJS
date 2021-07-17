@@ -1,8 +1,8 @@
-export { User } from "./classes/user";
-export { Platoon } from "./classes/platoon";
-export { GameClient } from "./classes/gameclient";
-export { BattlelogClient } from "./classes/blclient";
-export { Soldier } from "./classes/soldier";
-export { Server } from "./classes/server";
-export { CacheMap } from "./classes/cachemap";
+export * from "./classes/user";
+export * from "./classes/blclient";
+export * from "./classes/gameclient";
+export * from "./classes/soldier";
+export * from "./classes/platoon";
+export * from "./classes/server";
+export * from "./classes/cachemap";
 export * as utils from "./utils";
