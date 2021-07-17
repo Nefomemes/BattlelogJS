@@ -2,7 +2,7 @@ import axios from "axios";
 import type { AxiosInstance } from "axios";
 
 import { CacheMap } from "./cachemap";
-import { User } from "./user";
+import { Profile, User } from "./user";
 import { Server } from "./server";
 import type { SupportedGames } from "../types/games";
 import type { AxiosRequestConfig } from "axios";
@@ -73,11 +73,16 @@ export class GameClient {
   servers = new CacheMap();
   platoons = new CacheMap();
 
-  async fetchUser(data: User | string): Promise<User> {
-    let user = await new User(this, data).fetch();
+  async fetchProfile(data: Profile | string): Promise<Profile> {
+    let user = await new Profile(this, data).fetch();
 
     this.users.structureData(user.user.userId, user);
     return user;
+  }
+
+  async fetchProfileFromUser(data: User): Promise<Profile> {
+  // @ts-expect-error
+  return await this.fetchProfile({user: data});
   }
 
   async fetchPlatoon(data: Platoon | string): Promise<Platoon> {
