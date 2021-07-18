@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/react": "17.0.14",
     "docusaurus-plugin-typedoc": "0.15.2",
-    "typedoc": "0.21.3",
+    "typedoc": "0.21.4",
     "typedoc-plugin-markdown": "3.10.3"
   },
   "dependencies": {
