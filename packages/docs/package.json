@@ -14,22 +14,22 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "devDependencies": {
-    "@types/react": "^17.0.11",
-    "docusaurus-plugin-typedoc": "^0.15.1",
+    "@types/react": "17.0.14",
+    "docusaurus-plugin-typedoc": "0.15.2",
     "typedoc": "0.21.3",
-    "typedoc-plugin-markdown": "^3.9.0"
+    "typedoc-plugin-markdown": "3.10.3"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.3",
     "@docusaurus/preset-classic": "2.0.0-beta.3",
     "@mdx-js/react": "^1.6.21",
-    "@svgr/webpack": "^5.5.0",
-    "clsx": "^1.1.1",
-    "file-loader": "^6.2.0",
+    "@svgr/webpack": "5.5.0",
+    "clsx": "1.1.1",
+    "file-loader": "6.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.38.1"
+    "url-loader": "4.1.1",
+    "webpack": "5.45.1"
   },
   "browserslist": {
     "production": [
