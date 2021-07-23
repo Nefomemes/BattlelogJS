@@ -58,7 +58,7 @@ importers:
       eslint: 7.31.0
       eslint-config-prettier: 8.3.0
       eslint-plugin-import: 2.23.4
-      eslint-plugin-jsdoc: 35.4.5
+      eslint-plugin-jsdoc: 35.5.1
       eslint-plugin-node: 11.1.0
       eslint-plugin-promise: 5.1.0
       jest: 27.0.6
@@ -87,7 +87,7 @@ importers:
       eslint: 7.31.0
       eslint-config-prettier: 8.3.0_eslint@7.31.0
       eslint-plugin-import: 2.23.4_eslint@7.31.0
-      eslint-plugin-jsdoc: 35.4.5_eslint@7.31.0
+      eslint-plugin-jsdoc: 35.5.1_eslint@7.31.0
       eslint-plugin-node: 11.1.0_eslint@7.31.0
       eslint-plugin-promise: 5.1.0_eslint@7.31.0
       jest: 27.0.6_ts-node@10.1.0
@@ -6653,8 +6653,8 @@ packages:
       tsconfig-paths: 3.9.0
     dev: true
 
-  /eslint-plugin-jsdoc/35.4.5_eslint@7.31.0:
-    resolution: {integrity: sha512-CguI9uhIJoihCsW5WTUY9xX2w9EpovmmHCz/JzAevC7Fcop+wyJLDjzaBnTh2LlSJvG9qVfkr7OJ+9i4cv1Kzg==}
+  /eslint-plugin-jsdoc/35.5.1_eslint@7.31.0:
+    resolution: {integrity: sha512-pPYPWtsykwVEue1tYEyoppBj4dgF7XicF67tLLLraY6RQYBq7qMKjUHji19+hfiTtYKKBD0YfeK8hgjPAE5viw==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
